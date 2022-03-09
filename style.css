@@ -1,0 +1,152 @@
+/* font-family: 'Eczar', serif;  */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Eczar", serif;
+  color: #404040;
+  font-size: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* combinator used */
+h1 + p {
+  color: #f89421;
+  font-weight: 900;
+  font-size: 1.4125rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.225rem;
+  margin: 0;
+}
+
+/* combinator used */
+h2 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.text-top {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  order: -1;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.fine-print {
+  font-size: 0.725rem;
+  letter-spacing: 1px;
+}
+
+.intro {
+  background-color: #404040;
+  background-image: url("./bbq-meat-veggies.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 0 05em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.main-content {
+  padding: 2em 2em;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* form */
+
+.email-section {
+  width: 90%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.75em;
+  padding: 0.25em;
+  border: 1px solid #404040;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-main {
+  background: linear-gradient(to left, #ff713b, #ffa51d);
+  color: #fff;
+  transition: color 250ms;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+  color: #404040;
+}
+
+/* media query  */
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 2rem;
+    display: flex;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h1 + p,
+  h2 {
+    font-size: 1.75rem;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
